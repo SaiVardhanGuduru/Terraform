@@ -4,7 +4,7 @@ resource "aws_instance" "example" {
   vpc_security_group_ids=[aws_security_group.allow_tls.id]
 
   tags = {
-    Name = var.ec2_tags
+    Name = var.ec2_tags.Name
   }
 }
 

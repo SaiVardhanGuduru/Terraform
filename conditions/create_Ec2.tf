@@ -1,6 +1,6 @@
 resource "aws_instance" "example" {
   ami           = "ami-09c813fb71547fc4f"
-  instance_type = var.ec2_tags.Environment =="prod" ? "t2.medium" : "t3.micro"
+  instance_type = var.environment =="prod" ? "t2.medium" : "t3.micro"
   vpc_security_group_ids=[aws_security_group.allow_tls.id]
 
   tags = {

@@ -8,7 +8,7 @@ resource "aws_instance" "expense" {
   tags= merge(
       var.ec2_tags,
       {
-        Name=var.instances[coun.index]
+        Name=var.instances[count.index]
       }
 
 

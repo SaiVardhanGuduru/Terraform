@@ -56,3 +56,12 @@ variable "sg_tags" {
         Name = "expense-backend-dev"
     }
 }
+
+
+variable "zone_id" {
+    default = "Z0229472386CXICROSV7X"
+}
+
+variable "domain_name" {
+    default = "saivardhanguduru.cfd"
+}

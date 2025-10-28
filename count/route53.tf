@@ -4,6 +4,6 @@ resource "aws_route53_record" "frontend" {
   name    = "saivardhanguduru.cfd"
   type    = "A"
   ttl     = 1
-  records = [aws_instance.expense[2].public_ip] #list type
+  records = [aws_instance.expense[1].public_ip] #list type
   allow_overwrite = true
 }

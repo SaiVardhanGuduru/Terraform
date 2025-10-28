@@ -10,6 +10,7 @@ resource "aws_route53_record" "expense" {
 }
 
 resource "aws_route53_record" "frontend" {
+  provider = aws.personal
   zone_id = var.zone_id
   name    = "${var.domain_name}"
   type    = "A"

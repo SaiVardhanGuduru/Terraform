@@ -1,3 +1,15 @@
+variable "personal_access_key" {
+  description = "Access key for personal AWS account"
+  type        = string
+}
+
+variable "personal_secret_key" {
+  description = "Secret key for personal AWS account"
+  type        = string
+  sensitive   = true
+}
+
+
 variable "ami_id" {
   type        = string
   default     = "ami-09c813fb71547fc4f"

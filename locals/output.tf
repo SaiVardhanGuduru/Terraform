@@ -1,3 +1,3 @@
-output "instance-type"{
-    value = var.instance_type
+output "instance_type"{
+    value = aws_instance.example.instance_type
 }

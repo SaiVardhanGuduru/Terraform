@@ -1,11 +1,28 @@
+variable "personal_access_key" {
+  description = "Access key for personal AWS account"
+  type        = string
+}
+
+variable "personal_secret_key" {
+  description = "Secret key for personal AWS account"
+  type        = string
+  sensitive   = true
+}
+
+
 variable "ami_id" {
   type        = string
   default     = "ami-09c813fb71547fc4f"
   description = "This is RHEL9 AMI ID"
 }
-
+variable "instances" {
+    default = ["mysql", "backend", "frontend"]
+}
 variable "instance_type" {
     default = "t3.micro"
+}
+variable "environment" {
+    default = "prod"
 }
 
 variable "ec2_tags" {
@@ -14,7 +31,7 @@ variable "ec2_tags" {
         Project = "expense"
         #Component = "backend"
         Environment = "dev"
-        Name = "expense"
+        #Name = "expense-backend-dev"
     }
 }
 
@@ -40,10 +57,11 @@ variable "sg_tags" {
     }
 }
 
-variable "component"{
-    default  = local.component
+
+variable "zone_id" {
+    default = "Z0229472386CXICROSV7X"
 }
 
-output "component"{
-    value= component
+variable "domain_name" {
+    default = "saivardhanguduru.cfd"
 }

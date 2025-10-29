@@ -29,9 +29,9 @@ variable "ec2_tags" {
     type = map
     default = {
         Project = "expense"
-        #Component = "backend"
+        Component = "backend"
         Environment = "dev"
-        #Name = "expense-backend-dev"
+        Name = "expense-backend-dev"
     }
 }
 

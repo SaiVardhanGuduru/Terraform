@@ -41,7 +41,7 @@ variable "sg_tags" {
 }
 
 variable "component"{
-    default  = "${ec2_tags.Name}-backend-${ec2_tags.Environment}"
+    default  = local.component
 }
 
 output "component"{

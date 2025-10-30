@@ -36,3 +36,4 @@ resource "aws_security_group" "allow_tls" {
   tags = {
     Name = "${var.common_tags.project}-${var.environment}"
 }
+}

@@ -2,7 +2,7 @@ resource "aws_instance" "expense" {
   count = length(var.instances)
 
   ami           = "ami-09c813fb71547fc4f"
-  instance_type = lookup(terraform.workspace,var.instance_type)
+  instance_type = lookup(var.instance_type,terraform.workspace)
   vpc_security_group_ids=[aws_security_group.allow_tls.id]
 
   tags= merge(

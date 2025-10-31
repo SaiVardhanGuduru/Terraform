@@ -1,5 +1,5 @@
 module "aws-ec2" {
-    source = "../modules"
+    source = "../modules/aws-ec2"
     sg_id = "sg-004e7a707bd1cf420"
     instance_type = "t3.small"
 }

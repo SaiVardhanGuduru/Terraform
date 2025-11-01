@@ -1,7 +1,7 @@
 module "aws-ec2" {
     source = "../modules"
     sg_id = "sg-0be21d8310ac6b9ab"
-    instance_type = "t3.small"
+    #instance_type = "t3.small"
 }
 
 output "public_ip" {

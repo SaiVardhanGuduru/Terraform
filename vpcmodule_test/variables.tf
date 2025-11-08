@@ -24,7 +24,9 @@ variable "vpc_tags" {
     }
 }
 variable "vpc_name" {
-    default = "expense"
+    default = {
+        Name="expense"
+    }
   
 }
 

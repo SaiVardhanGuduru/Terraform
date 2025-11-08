@@ -6,6 +6,7 @@ module "vpc" {
     environment = var.environment
     common_tags = var.common_tags
     vpc_tags = var.vpc_tags
+    vpc_name=var.vpc_name
 
     
     

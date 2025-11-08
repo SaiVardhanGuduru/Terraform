@@ -14,7 +14,7 @@ variable "enable_dns_hostnames" {
     default = true
 }
 variable "vpc_name" {
-  
+  type = map
 }
 
 # mandatory

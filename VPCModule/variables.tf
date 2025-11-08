@@ -13,6 +13,9 @@ variable "vpc_cidr" {
 variable "enable_dns_hostnames" {
     default = true
 }
+variable "vpc_name" {
+  
+}
 
 # mandatory
 variable "common_tags"{

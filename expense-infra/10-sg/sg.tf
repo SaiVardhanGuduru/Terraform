@@ -5,7 +5,8 @@ module "mysql_sg" {
     environment = var.environment
     sg_name = "mysql"
     sg_description = "Created for MySQL instances in expense dev"
-    vpc_id = data.aws_ssm_parameter.vpc_id.value
+    #vpc_id = data.aws_ssm_parameter.vpc_id.value
+    vpc_id=var.vpc_id
     common_tags = var.common_tags
 }
 
@@ -18,7 +19,8 @@ module "bastion_sg" {
     environment = var.environment
     sg_name = "bastion"
     sg_description = "Created for bastion instances in expense dev"
-    vpc_id = data.aws_ssm_parameter.vpc_id.value
+    #vpc_id = data.aws_ssm_parameter.vpc_id.value
+    vpc_id=var.vpc_id
     common_tags = var.common_tags
 }
 
@@ -29,7 +31,8 @@ module "vpn_sg" {
     environment = var.environment
     sg_name = "vpn"
     sg_description = "Created for VPN instances in expense dev"
-    vpc_id = data.aws_ssm_parameter.vpc_id.value
+    #vpc_id = data.aws_ssm_parameter.vpc_id.value
+    vpc_id=var.vpc_id
     common_tags = var.common_tags
 }
 
@@ -39,6 +42,7 @@ module "alb_ingress_sg" {
     environment = var.environment
     sg_name = "app-alb"
     sg_description = "Created for backend ALB in expense dev"
-    vpc_id = data.aws_ssm_parameter.vpc_id.value
+    #vpc_id = data.aws_ssm_parameter.vpc_id.value
+    vpc_id=var.vpc_id
     common_tags = var.common_tags
 }

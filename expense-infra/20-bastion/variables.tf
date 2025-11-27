@@ -17,3 +17,7 @@ variable "common_tags" {
 variable "public_subnet_ids" {
   
 }
+
+variable "bastion_sg_id" {
+  
+}

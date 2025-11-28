@@ -3,8 +3,10 @@ terraform {
     aws = {
       source = "hashicorp/aws"
     }
-    aws.personal = {
-      source = "hashicorp/aws"
-    }
+    
   }
+  
+}
+provider "aws" {
+  alias = "personal"
 }

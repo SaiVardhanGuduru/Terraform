@@ -1,6 +1,16 @@
 variable "vpc_id" {
   
 }
+variable "private_subnet_ids" {
+  
+}
+variable "bastion_sg_id" {
+  
+}
+variable "app_alb_sg" {
+  
+}
+
 
 
 variable "project_name" {

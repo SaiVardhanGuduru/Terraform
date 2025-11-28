@@ -11,8 +11,8 @@ resource "aws_ssm_parameter" "bastion_sg_id" {
   value = module.bastion_sg.sg_id
 }
 
-resource "aws_ssm_parameter" "alb_ingress_sg_id" {
-  name  = "/${var.project_name}/${var.environment}/alb_ingress_sg_id"
+resource "aws_ssm_parameter" "app_alb_sg" {
+  name  = "/${var.project_name}/${var.environment}/app_alb_sg"
   type  = "String"
-  value = module.alb_ingress_sg.sg_id
+  value = module.app_alb_sg.sg_id
 }

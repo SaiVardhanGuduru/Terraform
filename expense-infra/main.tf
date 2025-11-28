@@ -31,6 +31,6 @@ module "app_alb"{
   vpc_id = module.vpc.vpc_id
   private_subnet_ids = module.vpc.private_subnet_ids
   bastion_sg_id=module.sg.bastion_sg_id
-  app_alb_sg = module.sg.app_alb_sg
+  app_alb_sg = module.sg.app_alb_sg_id
    
 }

@@ -7,7 +7,7 @@ variable "private_subnet_ids" {
 variable "bastion_sg_id" {
   
 }
-variable "app_alb_sg" {
+variable "app_alb_sg_id" {
   
 }
 

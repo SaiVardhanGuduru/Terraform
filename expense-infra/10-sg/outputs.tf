@@ -1,3 +1,7 @@
 output "bastion_sg_id" {
   value = module.bastion_sg.sg_id
 }
+
+output "app_alb_sg" {
+  value = module.app_alb_sg.sg_id
+}

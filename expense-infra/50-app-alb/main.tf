@@ -1,10 +1,10 @@
 module "alb" {
   source = "terraform-aws-modules/alb/aws"
-  internal = true
+  internal = false
   # expense-dev-app-alb
   name    = "${var.project_name}-${var.environment}-app-alb"
   vpc_id  = var.vpc_id
-  subnets = local.private_subnet_ids
+  subnets = local.public_subnet_ids
   create_security_group = false
   security_groups = [local.app_alb_sg_id]
   enable_deletion_protection = false

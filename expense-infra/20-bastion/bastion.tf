@@ -6,7 +6,7 @@ resource "aws_instance" "this" {
 
   # 20GB is not enough
   root_block_device {
-    volume_size = 50  # Set root volume size to 50GB
+    volume_size = 30  
     volume_type = "gp3"  # Use gp3 for better performance (optional)
   }
   #user_data = file("bastion.sh")

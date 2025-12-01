@@ -24,6 +24,6 @@ output "database_subnet_ids" {
 }
 
 output "database_subnet_group_name" {
-  value = module.vpc.expense
+  value = module.vpc.expense.name
   
 }

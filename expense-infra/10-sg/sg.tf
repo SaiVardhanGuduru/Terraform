@@ -10,8 +10,25 @@ module "mysql_sg" {
     common_tags = var.common_tags
 }
 
+module "backend_sg" {
+    source = "git::https://github.com/SaiVardhanGuduru/Terraform.git//terraform-aws-securitygroup?ref=main"
+    project_name = var.project_name
+    environment = var.environment
+    sg_name = "backend"
+    sg_description = "Created for backend instances in expense dev"
+    vpc_id = var.vpc_id
+    common_tags = var.common_tags
+}
 
-
+module "frontend_sg" {
+    source = "git::https://github.com/SaiVardhanGuduru/Terraform.git//terraform-aws-securitygroup?ref=main"
+    project_name = var.project_name
+    environment = var.environment
+    sg_name = "frontend"
+    sg_description = "Created for frontend instances in expense dev"
+    vpc_id = var.vpc_id
+    common_tags = var.common_tags
+}
 
 module "bastion_sg" {
     source = "git::https://github.com/SaiVardhanGuduru/Terraform.git//terraform-aws-securitygroup?ref=main"
@@ -48,12 +65,12 @@ module "app_alb_sg" {
     common_tags = var.common_tags
 }
 module "web_alb_sg" {
-    source = "git::https://github.com/DAWS-82S/terraform-aws-securitygroup.git?ref=main"
+    source = "git::https://github.com/SaiVardhanGuduru/Terraform.git//terraform-aws-securitygroup?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "web-alb"
     sg_description = "Created for frontend ALB in expense dev"
-    vpc_id = data.aws_ssm_parameter.vpc_id.value
+    vpc_id = var.vpc_id
     common_tags = var.common_tags
 }
 

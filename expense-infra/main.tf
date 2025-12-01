@@ -35,3 +35,17 @@ module "app_alb"{
   app_alb_sg_id = module.sg.app_alb_sg_id
    
 }
+
+module "database_rds"{
+  source = "./40-RDS"
+  providers = {
+    aws = aws
+  }
+  database_subnet_group_name = module.vpc.database_subnet_group_name
+  mysql_sg_id = module.sg.mysql_sg_id
+
+
+
+
+
+}

@@ -66,6 +66,7 @@ module "db" {
 }
 
 resource "aws_route53_record" "www-dev" {
+  provider = aws.personal
   zone_id = var.zone_id
   name    = "mysql-${var.environment}.${var.domain_name}"
   type    = "CNAME"

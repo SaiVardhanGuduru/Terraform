@@ -39,7 +39,8 @@ module "app_alb"{
 module "database_rds"{
   source = "./40-RDS"
   providers = {
-    aws = aws
+    aws          = aws
+    aws.personal = aws.personal
   }
   database_subnet_group_name = module.vpc.database_subnet_group_name
   mysql_sg_id = module.sg.mysql_sg_id
